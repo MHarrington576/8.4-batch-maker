@@ -37,6 +37,7 @@ var RecipeDetailContainer = React.createClass({
   },
 
   render: function(){
+    console.log('state', this.state);
     return (
       <BaseLayout>
         <RecipeHeading recipe={this.state.recipe} />

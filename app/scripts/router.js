@@ -2,12 +2,12 @@ var Backbone = require('backbone');
 var React = require('react');
 var ReactDOM = require('react-dom');
 
-var setUpParse = require('./parseUtilities').setUpParse;
+var setupParse = require('./parseUtilities').setupParse;
 var AdjustRecipeContainer = require('./components/adjustRecipe.jsx').AdjustRecipeContainer;
 var RecipeAddEditContainer = require('./components/recipeForm.jsx').RecipeAddEditContainer;
 var RecipeListContainer = require('./components/recipeList.jsx').RecipeListContainer;
 var RecipeDetailContainer = require('./components/recipeDetail.jsx').RecipeDetailContainer;
-
+var LoginContainer = require('./components/login.jsx').LoginContainer;
 
 var AppRouter = Backbone.Router.extend({
   routes: {
@@ -17,16 +17,15 @@ var AppRouter = Backbone.Router.extend({
     'recipes/:id/': 'recipeDetail',
     'recipes/': 'recipeList',
   },
-
   initialize: function(){
-    setUpParse('tiyfeefall2016', 'parietinaeumbra');
+    setupParse("tiyfeefall2016", "parietinaeumbra")
   },
 
   index: function(){
     ReactDOM.render(
-      React.createElement(AdjustRecipeContainer),
+      React.createElement(LoginContainer),
       document.getElementById('app')
-    );
+    )
   },
 
   recipeAddEdit: function(recipeId){
@@ -44,6 +43,8 @@ var AppRouter = Backbone.Router.extend({
   },
 
   recipeList: function(){
+    // var token = localStorage.getItem('token');
+    // setupParse("tiyfeefall2016", "parietinaeumbra", token);
     ReactDOM.render(
       React.createElement(RecipeListContainer),
       document.getElementById('app')

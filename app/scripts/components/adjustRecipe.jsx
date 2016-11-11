@@ -71,14 +71,16 @@ var AdjustRecipeContainer = React.createClass({
   },
 
   render: function(){
-    var ingredients = this.props.recipe.get('ingredients');
+    //  <IngredientList factor={this.state.factor} ingredients={ingredients} />
+    // var ingredients = this.props.recipe.get('ingredients');
+    console.log(this.props);
     return (
       <div>
        <AdjustmentForm recipe={this.props.recipe} adjustQtys={this.adjustQtys}/>
 
        <p className="lead">Ingredients</p>
 
-       <IngredientList factor={this.state.factor} ingredients={ingredients} />
+
      </div>
     )
   }
