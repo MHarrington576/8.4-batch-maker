@@ -1,17 +1,23 @@
-
-// Bootstrap Variables
 $icon-font-path: '../../node_modules/bootstrap-sass/assets/fonts/bootstrap/';
-
-// Import Bootstrap
 @import '../../node_modules/bootstrap-sass/assets/stylesheets/bootstrap';
+@import 'https://fonts.googleapis.com/css?family=Rock+Salt|Satisfy|Proza+Libre';
 
-
-*,
-*::before,
-*::after {
+*, *::before, *::after {
   box-sizing: border-box;
 }
 
 img {
   max-width: 100%;
+}
+
+body {
+  font-family: 'Proza Libre', sans-serif;
+}
+
+h1 {
+  font-family: 'Rock Salt', sans-serif;
+}
+
+h2, h3, h4, h5, h6 {
+  font-family: 'Satisfy', serif;
 }
