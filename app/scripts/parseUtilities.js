@@ -1,3 +1,5 @@
+var Backbone = require('backbone');
+
 function setUpParse(appId, apiKey, sessionId){
   $.ajaxSetup({
     beforeSend: function(xhr){

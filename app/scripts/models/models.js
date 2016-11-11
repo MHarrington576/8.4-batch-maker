@@ -71,7 +71,7 @@ var Recipe = ParseModel.extend({
   }
 });
 
-var RecipeCollection({
+var RecipeCollection = ParseCollection.extend({
   model: Recipe,
   url: 'https://shadow-of-the-colossus-server/herokuapp.com/classes/Recipes'
 });
